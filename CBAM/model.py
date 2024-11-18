@@ -194,7 +194,7 @@ class VGGBase(nn.Module):
         param_names = list(state_dict.keys())
 
         # Pretrained VGG base
-        weights_path = 'C:\\Users\\Nameless\\Downloads\\Compressed\\ZJU-Leaper-VOC\\vgg16-397923af.pth'
+        weights_path = '/kaggle/input/ssd-cbam-reorganizedvoc/TextileDefectDetectionReorganizedVOC/vgg16-397923af.pth'
         pretrained_state_dict = torch.load(weights_path)
 
         pretrained_param_names = list(pretrained_state_dict.keys())
