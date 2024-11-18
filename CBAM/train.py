@@ -9,7 +9,7 @@ import sys
 torch.autograd.set_detect_anomaly(False)  # Changed to False for speed
 
 # Data parameters
-data_folder = 'C:\\Users\\Nameless\\Downloads\\Compressed\\ZJU-Leaper-VOC'
+data_folder = '/kaggle/input/ssd-cbam-reorganizedvoc'
 keep_difficult = True
 
 # Model parameters
@@ -26,8 +26,8 @@ else:
 
 # Modified learning parameters for testing
 checkpoint = None
-batch_size = 4  # Reduced batch size for MX350
-test_epochs = 3
+batch_size = 16
+test_epochs = 50
 workers = 2  # Reduced workers for better stability
 print_freq = 5  # Print more frequently
 lr = 1e-3
