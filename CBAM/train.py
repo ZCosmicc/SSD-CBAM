@@ -9,7 +9,7 @@ import sys
 torch.autograd.set_detect_anomaly(False)  # Changed to False for speed
 
 # Data parameters
-data_folder = '/kaggle/input/ssd-cbam-reorganizedvoc/TextileDefectDetectionReorganizedVOC'
+data_folder = '/kaggle/input/ssd-cbam-reorganizedvocc/TextileDefectDetectionReorganizedVOC'
 keep_difficult = True
 
 # Model parameters
