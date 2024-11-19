@@ -132,15 +132,6 @@ def main():
         print('\nTraining Complete!')
         print(f'Total training time: {total_time:.2f} seconds ({total_time/60:.2f} minutes)')
         print(f'Average epoch time: {avg_epoch_time:.2f} seconds ({avg_epoch_time/60:.2f} minutes)')
-        
-        # Estimate full training time
-        iterations_per_epoch = len(train_loader)
-        full_epochs = 120000 // iterations_per_epoch
-        estimated_full_time = avg_epoch_time * full_epochs
-        
-        print(f'\nEstimated time for full training (120k iterations):')
-        print(f'- Approximately {full_epochs} epochs')
-        print(f'- {estimated_full_time/3600:.2f} hours ({estimated_full_time/86400:.2f} days)')
 
     except KeyboardInterrupt:
         print('\nTraining interrupted by user!')
