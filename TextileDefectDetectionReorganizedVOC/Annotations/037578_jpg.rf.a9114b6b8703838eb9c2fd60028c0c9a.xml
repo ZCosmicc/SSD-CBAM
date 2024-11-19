@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>037578_jpg.rf.a9114b6b8703838eb9c2fd60028c0c9a.jpg</filename>
+	<path>037578_jpg.rf.a9114b6b8703838eb9c2fd60028c0c9a.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>300</width>
+		<height>300</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Stain</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>94</xmin>
+			<xmax>221</xmax>
+			<ymin>245</ymin>
+			<ymax>301</ymax>
+		</bndbox>
+	</object>
+</annotation>

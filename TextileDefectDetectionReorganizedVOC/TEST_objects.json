@@ -1,0 +1,3386 @@
+[
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        190,
+        1,
+        301,
+        119
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        97,
+        125,
+        270
+      ],
+      [
+        1,
+        21,
+        49,
+        54
+      ]
+    ],
+    "labels": [
+      1,
+      1
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        1,
+        46,
+        48
+      ],
+      [
+        1,
+        232,
+        43,
+        301
+      ]
+    ],
+    "labels": [
+      1,
+      2
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        152,
+        152,
+        180,
+        188
+      ],
+      [
+        195,
+        156,
+        228,
+        197
+      ]
+    ],
+    "labels": [
+      1,
+      1
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        256,
+        91,
+        301,
+        152
+      ],
+      [
+        1,
+        213,
+        157,
+        301
+      ]
+    ],
+    "labels": [
+      3,
+      3
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        34,
+        56,
+        206,
+        167
+      ],
+      [
+        284,
+        24,
+        301,
+        53
+      ]
+    ],
+    "labels": [
+      3,
+      1
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        58,
+        145,
+        301,
+        273
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        40,
+        86,
+        185,
+        246
+      ],
+      [
+        76,
+        14,
+        144,
+        50
+      ]
+    ],
+    "labels": [
+      2,
+      2
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        7,
+        135,
+        179,
+        260
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        75,
+        174,
+        176,
+        298
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        142,
+        203,
+        301,
+        298
+      ],
+      [
+        178,
+        207,
+        301,
+        273
+      ]
+    ],
+    "labels": [
+      2,
+      3
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        25,
+        178,
+        190,
+        301
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        28,
+        1,
+        196,
+        93
+      ],
+      [
+        284,
+        60,
+        301,
+        132
+      ],
+      [
+        1,
+        259,
+        29,
+        301
+      ]
+    ],
+    "labels": [
+      3,
+      1,
+      1
+    ],
+    "difficulties": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        32,
+        1,
+        301,
+        301
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        272,
+        38,
+        301,
+        212
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        209,
+        147,
+        297,
+        301
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        35,
+        95,
+        174
+      ],
+      [
+        90,
+        218,
+        135,
+        273
+      ]
+    ],
+    "labels": [
+      2,
+      2
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        51,
+        167,
+        100,
+        286
+      ],
+      [
+        1,
+        5,
+        60,
+        262
+      ]
+    ],
+    "labels": [
+      3,
+      2
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        76,
+        107,
+        156
+      ],
+      [
+        1,
+        77,
+        48,
+        158
+      ]
+    ],
+    "labels": [
+      2,
+      3
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        163,
+        194,
+        301,
+        277
+      ],
+      [
+        193,
+        199,
+        286,
+        273
+      ]
+    ],
+    "labels": [
+      2,
+      3
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        196,
+        226,
+        280,
+        301
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        190,
+        1,
+        301,
+        73
+      ],
+      [
+        172,
+        151,
+        187,
+        174
+      ]
+    ],
+    "labels": [
+      2,
+      1
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        263,
+        1,
+        300,
+        112
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        50,
+        64,
+        167,
+        176
+      ],
+      [
+        50,
+        199,
+        116,
+        277
+      ]
+    ],
+    "labels": [
+      2,
+      2
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        81,
+        1,
+        130,
+        265
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        14,
+        27,
+        97
+      ],
+      [
+        94,
+        244,
+        166,
+        301
+      ],
+      [
+        235,
+        291,
+        266,
+        301
+      ]
+    ],
+    "labels": [
+      1,
+      3,
+      1
+    ],
+    "difficulties": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        19,
+        201,
+        204,
+        301
+      ],
+      [
+        152,
+        137,
+        218,
+        181
+      ],
+      [
+        257,
+        202,
+        301,
+        263
+      ]
+    ],
+    "labels": [
+      1,
+      1,
+      1
+    ],
+    "difficulties": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        278,
+        168,
+        301,
+        200
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        22,
+        1,
+        282,
+        301
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        61,
+        249,
+        266,
+        301
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        101,
+        42,
+        227,
+        152
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        233,
+        124,
+        301
+      ],
+      [
+        1,
+        251,
+        113,
+        301
+      ]
+    ],
+    "labels": [
+      3,
+      2
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        102,
+        64,
+        285,
+        301
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        14,
+        256,
+        66,
+        301
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        142,
+        1,
+        220,
+        62
+      ],
+      [
+        71,
+        66,
+        151,
+        175
+      ]
+    ],
+    "labels": [
+      2,
+      4
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        168,
+        116,
+        252,
+        225
+      ],
+      [
+        169,
+        265,
+        253,
+        301
+      ]
+    ],
+    "labels": [
+      2,
+      2
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        272,
+        79,
+        301,
+        156
+      ],
+      [
+        254,
+        165,
+        301,
+        220
+      ]
+    ],
+    "labels": [
+      2,
+      2
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        175,
+        256,
+        284,
+        301
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        183,
+        1,
+        253,
+        54
+      ],
+      [
+        187,
+        116,
+        290,
+        164
+      ]
+    ],
+    "labels": [
+      2,
+      4
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        246,
+        168,
+        301,
+        285
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        143,
+        1,
+        242,
+        147
+      ],
+      [
+        1,
+        142,
+        301,
+        301
+      ]
+    ],
+    "labels": [
+      2,
+      2
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        193,
+        43,
+        301
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        66,
+        143,
+        181,
+        244
+      ],
+      [
+        142,
+        276,
+        204,
+        301
+      ],
+      [
+        1,
+        284,
+        19,
+        301
+      ]
+    ],
+    "labels": [
+      2,
+      2,
+      2
+    ],
+    "difficulties": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        174,
+        171,
+        301
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        257,
+        143,
+        301,
+        301
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        28,
+        143,
+        301,
+        300
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        166,
+        102,
+        301
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        1,
+        301,
+        299
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        219,
+        1,
+        299,
+        17
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        106,
+        1,
+        210,
+        142
+      ],
+      [
+        34,
+        248,
+        94,
+        297
+      ]
+    ],
+    "labels": [
+      3,
+      1
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        123,
+        208,
+        215,
+        301
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        87,
+        1,
+        240,
+        138
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        85,
+        261,
+        247
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        59,
+        5,
+        301,
+        158
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        96,
+        69,
+        206,
+        184
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        78,
+        83,
+        200,
+        301
+      ],
+      [
+        85,
+        91,
+        197,
+        253
+      ]
+    ],
+    "labels": [
+      3,
+      2
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        229,
+        1,
+        300,
+        274
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        112,
+        15,
+        201,
+        106
+      ],
+      [
+        121,
+        20,
+        189,
+        85
+      ]
+    ],
+    "labels": [
+      3,
+      2
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        41,
+        1,
+        301,
+        183
+      ],
+      [
+        111,
+        193,
+        276,
+        301
+      ]
+    ],
+    "labels": [
+      2,
+      2
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        215,
+        82,
+        301
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        27,
+        1,
+        224,
+        212
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        108,
+        223,
+        188,
+        301
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        106,
+        1,
+        189,
+        191
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        154,
+        81,
+        301,
+        225
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        194,
+        48,
+        301
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        65,
+        121,
+        301,
+        284
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        1,
+        48,
+        244
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        203,
+        1,
+        301,
+        85
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        11,
+        93,
+        214,
+        219
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        87,
+        1,
+        150,
+        191
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        93,
+        117,
+        273,
+        295
+      ],
+      [
+        236,
+        185,
+        301,
+        274
+      ],
+      [
+        128,
+        137,
+        193,
+        219
+      ]
+    ],
+    "labels": [
+      3,
+      1,
+      2
+    ],
+    "difficulties": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        1,
+        106,
+        99,
+        208
+      ],
+      [
+        152,
+        125,
+        301,
+        212
+      ]
+    ],
+    "labels": [
+      1,
+      1
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        208,
+        165,
+        301,
+        301
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        252,
+        119,
+        301,
+        247
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        83,
+        27,
+        126,
+        301
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        203,
+        141,
+        301,
+        301
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        51,
+        131,
+        214,
+        301
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        102,
+        17,
+        301,
+        301
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        126,
+        1,
+        301,
+        119
+      ],
+      [
+        1,
+        36,
+        172,
+        271
+      ]
+    ],
+    "labels": [
+      2,
+      3
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        97,
+        98,
+        210
+      ],
+      [
+        1,
+        1,
+        74,
+        60
+      ]
+    ],
+    "labels": [
+      3,
+      3
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        180,
+        74,
+        290,
+        301
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        181,
+        118,
+        301
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        1,
+        105,
+        120
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        71,
+        1,
+        286,
+        147
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        212,
+        254,
+        301,
+        301
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        218,
+        1,
+        300,
+        65
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        150,
+        170,
+        300,
+        301
+      ],
+      [
+        189,
+        237,
+        256,
+        289
+      ]
+    ],
+    "labels": [
+      3,
+      2
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        193,
+        1,
+        301,
+        153
+      ],
+      [
+        1,
+        1,
+        37,
+        60
+      ]
+    ],
+    "labels": [
+      1,
+      2
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        182,
+        1,
+        301,
+        265
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        245,
+        8,
+        301,
+        187
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        136,
+        142,
+        301
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        81,
+        111,
+        238
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        207,
+        244,
+        301,
+        301
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        1,
+        213,
+        301,
+        252
+      ]
+    ],
+    "labels": [
+      4
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        85,
+        1,
+        208,
+        79
+      ],
+      [
+        209,
+        141,
+        301,
+        301
+      ]
+    ],
+    "labels": [
+      2,
+      2
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        46,
+        126,
+        269,
+        301
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        1,
+        162,
+        301
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        52,
+        1,
+        133,
+        117
+      ],
+      [
+        1,
+        195,
+        60,
+        301
+      ]
+    ],
+    "labels": [
+      2,
+      2
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        29,
+        22,
+        298,
+        175
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        70,
+        182,
+        168
+      ],
+      [
+        1,
+        191,
+        95,
+        301
+      ]
+    ],
+    "labels": [
+      3,
+      3
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        187,
+        1,
+        300,
+        40
+      ],
+      [
+        1,
+        1,
+        126,
+        106
+      ]
+    ],
+    "labels": [
+      1,
+      1
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        213,
+        251,
+        301,
+        300
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        137,
+        12,
+        294,
+        149
+      ]
+    ],
+    "labels": [
+      3
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        15,
+        65,
+        133
+      ],
+      [
+        234,
+        236,
+        301,
+        301
+      ]
+    ],
+    "labels": [
+      1,
+      2
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        1,
+        301,
+        59
+      ],
+      [
+        97,
+        100,
+        163,
+        137
+      ]
+    ],
+    "labels": [
+      2,
+      2
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        86,
+        136,
+        301,
+        301
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        1,
+        156,
+        276
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        156,
+        1,
+        259,
+        301
+      ],
+      [
+        19,
+        119,
+        98,
+        301
+      ]
+    ],
+    "labels": [
+      4,
+      4
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        144,
+        1,
+        292,
+        301
+      ],
+      [
+        1,
+        4,
+        99,
+        301
+      ]
+    ],
+    "labels": [
+      4,
+      4
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        236,
+        1,
+        272,
+        116
+      ],
+      [
+        110,
+        227,
+        123,
+        301
+      ]
+    ],
+    "labels": [
+      4,
+      1
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        209,
+        110,
+        247,
+        131
+      ],
+      [
+        88,
+        96,
+        129,
+        301
+      ]
+    ],
+    "labels": [
+      1,
+      4
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        1,
+        301,
+        260
+      ]
+    ],
+    "labels": [
+      4
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        228,
+        1,
+        301,
+        301
+      ],
+      [
+        1,
+        1,
+        222,
+        301
+      ]
+    ],
+    "labels": [
+      4,
+      4
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        215,
+        1,
+        257,
+        301
+      ],
+      [
+        106,
+        1,
+        136,
+        156
+      ]
+    ],
+    "labels": [
+      4,
+      4
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        53,
+        17,
+        137,
+        36
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        17,
+        253,
+        234,
+        273
+      ]
+    ],
+    "labels": [
+      1
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        172,
+        76,
+        215,
+        301
+      ],
+      [
+        95,
+        200,
+        120,
+        301
+      ],
+      [
+        1,
+        1,
+        301,
+        88
+      ],
+      [
+        26,
+        69,
+        79,
+        301
+      ]
+    ],
+    "labels": [
+      4,
+      4,
+      4,
+      4
+    ],
+    "difficulties": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        164,
+        301,
+        301
+      ],
+      [
+        1,
+        70,
+        301,
+        115
+      ],
+      [
+        164,
+        43,
+        301,
+        60
+      ]
+    ],
+    "labels": [
+      4,
+      4,
+      4
+    ],
+    "difficulties": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        90,
+        115,
+        301,
+        301
+      ],
+      [
+        60,
+        1,
+        97,
+        78
+      ],
+      [
+        1,
+        167,
+        40,
+        301
+      ]
+    ],
+    "labels": [
+      4,
+      4,
+      4
+    ],
+    "difficulties": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        154,
+        1,
+        301,
+        301
+      ],
+      [
+        1,
+        1,
+        138,
+        301
+      ]
+    ],
+    "labels": [
+      4,
+      4
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        169,
+        1,
+        301,
+        301
+      ]
+    ],
+    "labels": [
+      4
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        78,
+        1,
+        301,
+        301
+      ]
+    ],
+    "labels": [
+      4
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        149,
+        1,
+        301,
+        301
+      ],
+      [
+        1,
+        60,
+        68,
+        197
+      ]
+    ],
+    "labels": [
+      4,
+      4
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        1,
+        170,
+        301,
+        301
+      ]
+    ],
+    "labels": [
+      4
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        24,
+        13,
+        271,
+        88
+      ]
+    ],
+    "labels": [
+      4
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        135,
+        1,
+        198,
+        301
+      ],
+      [
+        1,
+        45,
+        117,
+        301
+      ]
+    ],
+    "labels": [
+      2,
+      4
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        162,
+        4,
+        301,
+        301
+      ],
+      [
+        1,
+        1,
+        122,
+        260
+      ]
+    ],
+    "labels": [
+      4,
+      4
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        159,
+        1,
+        301,
+        301
+      ],
+      [
+        68,
+        107,
+        82,
+        127
+      ]
+    ],
+    "labels": [
+      4,
+      1
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        1,
+        301,
+        116
+      ],
+      [
+        1,
+        131,
+        284,
+        301
+      ]
+    ],
+    "labels": [
+      4,
+      4
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        34,
+        1,
+        63,
+        156
+      ]
+    ],
+    "labels": [
+      4
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        213,
+        1,
+        257,
+        301
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        208,
+        1,
+        261,
+        301
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        192,
+        1,
+        229,
+        301
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        178,
+        2,
+        289,
+        178
+      ],
+      [
+        43,
+        1,
+        167,
+        161
+      ],
+      [
+        1,
+        247,
+        24,
+        301
+      ],
+      [
+        233,
+        186,
+        301,
+        301
+      ]
+    ],
+    "labels": [
+      4,
+      4,
+      4,
+      4
+    ],
+    "difficulties": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        1,
+        126,
+        180
+      ],
+      [
+        183,
+        142,
+        284,
+        301
+      ]
+    ],
+    "labels": [
+      4,
+      4
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        238,
+        1,
+        283,
+        301
+      ],
+      [
+        175,
+        224,
+        223,
+        260
+      ],
+      [
+        16,
+        1,
+        188,
+        251
+      ]
+    ],
+    "labels": [
+      2,
+      1,
+      4
+    ],
+    "difficulties": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        69,
+        1,
+        301,
+        301
+      ]
+    ],
+    "labels": [
+      4
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        94,
+        1,
+        229,
+        301
+      ],
+      [
+        237,
+        1,
+        272,
+        301
+      ]
+    ],
+    "labels": [
+      4,
+      2
+    ],
+    "difficulties": [
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        266,
+        1,
+        301,
+        301
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        42,
+        301,
+        112
+      ]
+    ],
+    "labels": [
+      4
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        231,
+        1,
+        296,
+        301
+      ]
+    ],
+    "labels": [
+      2
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [],
+    "labels": [],
+    "difficulties": []
+  },
+  {
+    "boxes": [
+      [
+        1,
+        22,
+        31,
+        109
+      ],
+      [
+        1,
+        120,
+        59,
+        273
+      ],
+      [
+        93,
+        1,
+        299,
+        301
+      ]
+    ],
+    "labels": [
+      4,
+      4,
+      4
+    ],
+    "difficulties": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        145,
+        1,
+        211,
+        87
+      ],
+      [
+        1,
+        174,
+        68,
+        273
+      ],
+      [
+        266,
+        197,
+        297,
+        301
+      ]
+    ],
+    "labels": [
+      4,
+      4,
+      2
+    ],
+    "difficulties": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        135,
+        1,
+        265,
+        138
+      ]
+    ],
+    "labels": [
+      4
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        31,
+        27,
+        114
+      ]
+    ],
+    "labels": [
+      4
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        118,
+        1,
+        301,
+        109
+      ]
+    ],
+    "labels": [
+      4
+    ],
+    "difficulties": [
+      0
+    ]
+  },
+  {
+    "boxes": [
+      [
+        1,
+        159,
+        301,
+        197
+      ]
+    ],
+    "labels": [
+      4
+    ],
+    "difficulties": [
+      0
+    ]
+  }
+]

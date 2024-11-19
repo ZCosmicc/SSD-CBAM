@@ -1,0 +1,14 @@
+<annotation>
+	<folder></folder>
+	<filename>033029_jpg.rf.64b9b39f3033ce0d5fd3ec0ad844d7d1.jpg</filename>
+	<path>033029_jpg.rf.64b9b39f3033ce0d5fd3ec0ad844d7d1.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>300</width>
+		<height>300</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+</annotation>

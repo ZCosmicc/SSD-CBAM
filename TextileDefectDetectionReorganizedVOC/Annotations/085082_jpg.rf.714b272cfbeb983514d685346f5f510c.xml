@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>085082_jpg.rf.714b272cfbeb983514d685346f5f510c.jpg</filename>
+	<path>085082_jpg.rf.714b272cfbeb983514d685346f5f510c.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>300</width>
+		<height>300</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Wrinkle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>1</xmin>
+			<xmax>265</xmax>
+			<ymin>86</ymin>
+			<ymax>292</ymax>
+		</bndbox>
+	</object>
+</annotation>
