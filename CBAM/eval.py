@@ -7,9 +7,9 @@ from pprint import PrettyPrinter
 pp = PrettyPrinter()
 
 # Parameters
-data_folder = './'
+data_folder = '/kaggle/working/SSD-CBAM/TextileDefectDetectionReorganizedVOC'
 keep_difficult = True  # difficult ground truth objects must always be considered in mAP calculation, because these objects DO exist!
-batch_size = 64
+batch_size = 16
 workers = 4
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 checkpoint = './checkpoint_ssd300.pth.tar'
