@@ -8,11 +8,11 @@ from torchvision import transforms
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# Label map
+# Correct Label Map
 voc_labels = ('background', 'stain', 'damage', 'oil stain', 'wrinkle')
-label_map = {k: v + 1 for v, k in enumerate(voc_labels)}
-label_map['background'] = 0
+label_map = {k: v for v, k in enumerate(voc_labels)}  # Assign sequential numbers
 rev_label_map = {v: k for k, v in label_map.items()}  # Inverse mapping
+
 
 # Color map for bounding boxes of detected objects from https://sashat.me/2017/01/11/list-of-20-simple-distinct-colors/
 distinct_colors = ['#e6194b', '#3cb44b', '#ffe119', '#0082c8', '#f58231']
