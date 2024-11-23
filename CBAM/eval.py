@@ -15,7 +15,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 checkpoint = './checkpoint_ssd300.pth.tar'
 
 # Load model checkpoint that is to be evaluated
-checkpoint = torch.load(checkpoint)
+checkpoint = torch.load(checkpoint, weights_only=True)
 model = checkpoint['model']
 model = model.to(device)
 
