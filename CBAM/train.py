@@ -43,6 +43,35 @@ decay_lr_to = 0.1
 cudnn.benchmark = True
 cudnn.fastest = True
 
+def save_checkpoint(epoch, model, optimizer, save_path='./'):
+    """
+    Save model checkpoint and model weights.
+
+    :param epoch: Current epoch number.
+    :param model: The SSD300 or SSD512 model.
+    :param optimizer: The optimizer used for training.
+    :param save_path: Path to save the checkpoint and weights.
+    """
+    # Ensure the save directory exists
+    os.makedirs(save_path, exist_ok=True)
+
+    # Save full checkpoint
+    checkpoint_path = os.path.join(save_path, f'checkpoint_epoch_{epoch}.pth.tar')
+    checkpoint = {
+        'epoch': epoch,
+        'model_state_dict': model.state_dict(),
+        'optimizer_state_dict': optimizer.state_dict()
+    }
+    torch.save(checkpoint, checkpoint_path)
+
+    # Save only model weights
+    weights_path = os.path.join(save_path, f'model_weights_epoch_{epoch}.pth')
+    torch.save(model.state_dict(), weights_path)
+
+    print(f"\nCheckpoint saved to: {checkpoint_path}")
+    print(f"Model weights saved to: {weights_path}")
+
+
 def main():
     """
     Training with timing measurements and progress tracking.
@@ -121,9 +150,8 @@ def main():
             print(f'\nEpoch {epoch + 1} completed in {epoch_time:.2f} seconds')
             print(f'Average batch time: {epoch_time/len(train_loader):.3f} seconds')
             
-            # Optional: Save checkpoint only at last epoch to save time
-            if epoch == test_epochs - 1:
-                save_checkpoint(epoch, model, optimizer)
+            # Save checkpoint
+            save_checkpoint(epoch, model, optimizer, save_path='./results')
 
         # Final statistics
         total_time = time.time() - total_start_time
@@ -132,10 +160,12 @@ def main():
         print('\nTraining Complete!')
         print(f'Total training time: {total_time:.2f} seconds ({total_time/60:.2f} minutes)')
         print(f'Average epoch time: {avg_epoch_time:.2f} seconds ({avg_epoch_time/60:.2f} minutes)')
+        print("\nResults saved in './results' directory.")
 
     except KeyboardInterrupt:
         print('\nTraining interrupted by user!')
         sys.exit(0)
+        
 
 def train(train_loader, model, criterion, optimizer, epoch):
     model.train()
