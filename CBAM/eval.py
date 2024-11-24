@@ -2,7 +2,6 @@ from utils import *
 from datasets import PascalVOCDataset
 from tqdm import tqdm
 from pprint import PrettyPrinter
-from model import SSD300 
 
 # Good formatting when printing the APs for each class and mAP
 pp = PrettyPrinter()
@@ -16,8 +15,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 checkpoint = './checkpoint_ssd300.pth.tar'
 
 # Load model checkpoint that is to be evaluated
-torch.serialization.add_safe_globals([SSD300])
-checkpoint = torch.load(checkpoint, weights_only=True)
+checkpoint = torch.load(checkpoint, weights_only=False)
 model = checkpoint['model']
 model = model.to(device)
 
