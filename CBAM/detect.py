@@ -1,6 +1,7 @@
 from torchvision import transforms
 from utils import *
 from PIL import Image, ImageDraw, ImageFont
+import matplotlib.pyplot as plt
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -99,4 +100,12 @@ if __name__ == '__main__':
     img_path = '/kaggle/working/SSD-CBAM/TextileDefectDetectionReorganizedVOC/JPEGImages/000007_jpg.rf.07d2010e55163b4e04736c014019797e.jpg'
     original_image = Image.open(img_path, mode='r')
     original_image = original_image.convert('RGB')
-    detect(original_image, min_score=0.2, max_overlap=0.5, top_k=200).show()
+    
+    # Get the annotated image
+    annotated_image = detect(original_image, min_score=0.2, max_overlap=0.5, top_k=200)
+    
+    # Display the image using matplotlib
+    plt.figure(figsize=(10, 10))
+    plt.imshow(annotated_image)
+    plt.axis('off')  # Turn off axis for better visualization
+    plt.show()
