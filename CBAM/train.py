@@ -43,9 +43,9 @@ decay_lr_to = 0.1
 cudnn.benchmark = True
 cudnn.fastest = True
 
-def save_checkpoint(epoch, model, optimizer, save_path='./'):
+def save_checkpoint(epoch, model, optimizer, save_path='./results'):
     """
-    Save model checkpoint and model weights.
+    Save model checkpoint and model weights at specific intervals.
 
     :param epoch: Current epoch number.
     :param model: The SSD300 or SSD512 model.
@@ -55,21 +55,26 @@ def save_checkpoint(epoch, model, optimizer, save_path='./'):
     # Ensure the save directory exists
     os.makedirs(save_path, exist_ok=True)
 
-    # Save full checkpoint
-    checkpoint_path = os.path.join(save_path, f'checkpoint_epoch_{epoch}.pth.tar')
-    checkpoint = {
-        'epoch': epoch,
-        'model_state_dict': model.state_dict(),
-        'optimizer_state_dict': optimizer.state_dict()
-    }
-    torch.save(checkpoint, checkpoint_path)
+    # Determine whether to save based on epoch
+    total_epochs = test_epochs  # Use the global test_epochs
+    should_save = (epoch == total_epochs // 2) or (epoch == total_epochs - 1)
 
-    # Save only model weights
-    weights_path = os.path.join(save_path, f'model_weights_epoch_{epoch}.pth')
-    torch.save(model.state_dict(), weights_path)
+    if should_save:
+        # Save full checkpoint
+        checkpoint_path = os.path.join(save_path, f'checkpoint_epoch_{epoch}.pth.tar')
+        checkpoint = {
+            'epoch': epoch,
+            'model_state_dict': model.state_dict(),
+            'optimizer_state_dict': optimizer.state_dict()
+        }
+        torch.save(checkpoint, checkpoint_path)
 
-    print(f"\nCheckpoint saved to: {checkpoint_path}")
-    print(f"Model weights saved to: {weights_path}")
+        # Save only model weights
+        weights_path = os.path.join(save_path, f'model_weights_epoch_{epoch}.pth')
+        torch.save(model.state_dict(), weights_path)
+
+        print(f"\nCheckpoint saved to: {checkpoint_path}")
+        print(f"Model weights saved to: {weights_path}")
 
 
 def main():
