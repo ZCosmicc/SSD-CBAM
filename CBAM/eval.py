@@ -12,7 +12,7 @@ keep_difficult = True  # difficult ground truth objects must always be considere
 batch_size = 16
 workers = 4
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-checkpoint = './checkpoint_ssd300.pth.tar'
+checkpoint = '/kaggle/working/SSD-CBAM/results/checkpoint_epoch_99.pth.tar'
 
 # Load model checkpoint that is to be evaluated
 checkpoint = torch.load(checkpoint, weights_only=False)
