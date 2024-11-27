@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Load model checkpoint
-checkpoint = '/kaggle/working/SSD-CBAM/results/checkpoint_epoch_99.pth.tar'
+checkpoint = '/SSD-CBAM/results/checkpoint_epoch_99.pth.tar'
 checkpoint = torch.load(checkpoint)
 start_epoch = checkpoint['epoch'] + 1
 print('\nLoaded checkpoint from epoch %d.\n' % start_epoch)
