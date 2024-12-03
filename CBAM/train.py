@@ -28,7 +28,7 @@ else:
 checkpoint = None
 batch_size = 16
 test_epochs = 100
-workers = 4  # Reduced workers for better stability
+workers = 8
 print_freq = 5  # Print more frequently
 lr = 1e-3
 momentum = 0.9
