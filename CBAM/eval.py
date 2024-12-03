@@ -2,6 +2,7 @@ from utils import *
 from datasets import PascalVOCDataset
 from tqdm import tqdm
 from pprint import PrettyPrinter
+from model import SSD300
 
 # Good formatting when printing the APs for each class and mAP
 pp = PrettyPrinter()
@@ -12,11 +13,11 @@ keep_difficult = True  # difficult ground truth objects must always be considere
 batch_size = 16
 workers = 4
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-checkpoint = './results/checkpoint_epoch_99.pth.tar'
+checkpoint = './results/model_weights_epoch_99.pth'
 
-# Load model checkpoint that is to be evaluated
-checkpoint = torch.load(checkpoint, weights_only=False)
-model = checkpoint['model']
+# Load model weights
+model = SSD300(n_classes=n_classes)
+model.load_state_dict(torch.load(checkpoint))
 model = model.to(device)
 
 # Switch to eval mode
