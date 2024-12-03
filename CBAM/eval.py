@@ -7,6 +7,8 @@ from model import SSD300
 # Good formatting when printing the APs for each class and mAP
 pp = PrettyPrinter()
 
+n_classes = len(label_map)
+
 # Parameters
 data_folder = '/kaggle/working/SSD-CBAM/TextileDefectDetectionReorganizedVOC'
 keep_difficult = True  # difficult ground truth objects must always be considered in mAP calculation, because these objects DO exist!
