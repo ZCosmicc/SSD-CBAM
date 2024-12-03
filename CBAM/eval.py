@@ -12,7 +12,7 @@ n_classes = len(label_map)
 # Parameters
 data_folder = '/kaggle/working/SSD-CBAM/TextileDefectDetectionReorganizedVOC'
 keep_difficult = True  # difficult ground truth objects must always be considered in mAP calculation, because these objects DO exist!
-batch_size = 16
+batch_size = 32
 workers = 8
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 checkpoint = './results/model_weights_epoch_99.pth'
