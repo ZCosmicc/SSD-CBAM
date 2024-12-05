@@ -15,11 +15,13 @@ keep_difficult = True  # difficult ground truth objects must always be considere
 batch_size = 8
 workers = 8
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+use_cbam = False # Match this to the training configuration (train.py)
 checkpoint = './results/model_weights_epoch_99.pth'
 
 # Load model weights
-model = SSD300(n_classes=n_classes)
-model.load_state_dict(torch.load(checkpoint))
+print(f"Initializing SSD300 with CBAM {'enabled' if use_cbam else 'disabled'}")
+model = SSD300(n_classes=n_classes, use_cbam=use_cbam)
+model.load_state_dict(torch.load(checkpoint), strict=False)
 model = model.to(device)
 
 # Switch to eval mode
