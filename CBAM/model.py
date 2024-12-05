@@ -141,8 +141,11 @@ class VGGBase(nn.Module):
 
         self.use_cbam = use_cbam
         if self.use_cbam:
+            print("CBAM is enabled for VGGBase")
             self.cbam4_3 = CBAM(512, 16)
             self.cbam7 = CBAM(1024, 16)
+        else:
+            print("CBAM is disabled for VGGBase")
 
     def forward(self, image):
         """
@@ -242,7 +245,10 @@ class AuxiliaryConvolutions(nn.Module):
         self.conv8_2 = nn.Conv2d(256, 512, kernel_size=3, stride=2, padding=1)  # dim. reduction because stride > 1
         self.use_cbam = use_cbam
         if self.use_cbam:
+            print("CBAM is enabled for AuxiliaryConvolutions")
             self.cbam8_2 = CBAM(512, 16)
+        else:
+            print("CBAM is disabled for AuxiliaryConvolutions")
 
         self.conv9_1 = nn.Conv2d(512, 128, kernel_size=1, padding=0)
         self.conv9_2 = nn.Conv2d(128, 256, kernel_size=3, stride=2, padding=1)  # dim. reduction because stride > 1
@@ -448,7 +454,7 @@ class SSD300(nn.Module):
         super(SSD300, self).__init__()
 
         self.n_classes = n_classes
-
+        print(f"Initializing SSD300 with CBAM {'enabled' if use_cbam else 'disabled'}")
         self.base = VGGBase(use_cbam=use_cbam)
         self.aux_convs = AuxiliaryConvolutions(use_cbam=use_cbam)
         self.pred_convs = PredictionConvolutions(n_classes)
