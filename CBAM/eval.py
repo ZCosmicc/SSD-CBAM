@@ -11,6 +11,9 @@ pp = PrettyPrinter()
 # Number of classes
 n_classes = len(label_map)
 
+rev_label_map = {v: k for k, v in label_map.items()}
+
+
 # Parameters
 data_folder = '/kaggle/working/SSD-CBAM/TextileDefectDetectionReorganizedVOC'
 keep_difficult = True
@@ -99,7 +102,7 @@ def calculate_precision_recall(det_boxes, det_labels, true_boxes, true_labels, t
         precision = TP / (TP + FP) if (TP + FP) > 0 else 0.0
         recall = TP / (TP + FN) if (TP + FN) > 0 else 0.0
 
-        precision_recall_per_class[label_map[c]] = {
+        precision_recall_per_class[rev_label_map[c]] = {
             'precision': precision,
             'recall': recall,
             'TP': TP,
