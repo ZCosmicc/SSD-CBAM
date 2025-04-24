@@ -87,7 +87,7 @@ def main():
     if checkpoint is None:
         start_epoch = 0
         #Integrating toggle to switch on/off CBAM
-        model = SSD300(n_classes=n_classes, use_cbam=True)  # Set to True to enable CBAM and False to disable CBAM
+        model = SSD300(n_classes=n_classes, use_cbam=False)  # Set to True to enable CBAM and False to disable CBAM
         biases = list()
         not_biases = list()
         for param_name, param in model.named_parameters():
