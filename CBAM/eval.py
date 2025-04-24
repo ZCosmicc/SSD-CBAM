@@ -20,7 +20,7 @@ keep_difficult = True
 batch_size = 16
 workers = 8
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-use_cbam = True  # Match this to training config
+use_cbam = False  # Match this to training config
 checkpoint = './results/model_weights_epoch_99.pth'
 
 # Load model
