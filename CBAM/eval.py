@@ -34,9 +34,8 @@ test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=batch_size, s
 
 
 def calculate_precision_recall(det_boxes, det_labels, true_boxes, true_labels, true_difficulties):
-    """
-    Compute precision and recall per class and overall.
-    """
+    from collections import defaultdict
+
     classwise_tp = defaultdict(int)
     classwise_fp = defaultdict(int)
     classwise_fn = defaultdict(int)
@@ -56,10 +55,22 @@ def calculate_precision_recall(det_boxes, det_labels, true_boxes, true_labels, t
             true_b_class = true_b[true_mask]
             true_d_class = true_d[true_mask]
 
+            if true_b_class.size(0) == 0:
+                # No ground truth, all detections are false positives
+                classwise_fp[class_id] += det_b_class.size(0)
+                overall_FP += det_b_class.size(0)
+                continue
+
             detected = torch.zeros(len(true_b_class), dtype=torch.uint8).to(device)
 
             for db in det_b_class:
                 ious = find_jaccard_overlap(db.unsqueeze(0), true_b_class)
+
+                if ious.size(1) == 0:
+                    classwise_fp[class_id] += 1
+                    overall_FP += 1
+                    continue
+
                 iou_max, iou_max_idx = ious.max(dim=1)
 
                 if iou_max.item() > 0.5:
