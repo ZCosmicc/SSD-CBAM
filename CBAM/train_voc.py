@@ -6,14 +6,19 @@ import torch.optim
 import torch.utils.data
 import sys
 import os
+import shutil
 
 from model import SSD300, MultiBoxLoss
 from voc_dataset import PascalVOC2007Dataset
 from utils import *
 torch.autograd.set_detect_anomaly(False)
 
+# Copy data from /input to /working if not already copied
+if not os.path.exists('/kaggle/working/VOCdevkit2007'):
+    shutil.copytree('/kaggle/input/pascal-voc-2007-data-view/VOCdevkit2007', '/kaggle/working/VOCdevkit2007')
+    
 # Data parameters
-data_folder = '/kaggle/input/pascal-voc-2007-data-view/VOCdevkit2007/VOC2007/'  # Adjust here
+data_folder = '/kaggle/working/VOCdevkit2007/VOC2007'  # Adjust here
 keep_difficult = True
 
 # Model parameters
