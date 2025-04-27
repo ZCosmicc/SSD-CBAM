@@ -12,13 +12,9 @@ from model import SSD300, MultiBoxLoss
 from voc_dataset import PascalVOC2007Dataset
 from utils import *
 torch.autograd.set_detect_anomaly(False)
-
-# Copy data from /input to /working if not already copied
-if not os.path.exists('/kaggle/working/VOCdevkit2007'):
-    shutil.copytree('/kaggle/input/pascal-voc-2007-data-view/VOCdevkit2007', '/kaggle/working/VOCdevkit2007')
     
 # Data parameters
-data_folder = '/kaggle/working/VOCdevkit2007/VOC2007'  # Adjust here
+data_folder = '/kaggle/input/voc2007/VOCdevkit/VOC2007'  # Adjust here
 keep_difficult = True
 
 # Model parameters
@@ -97,7 +93,7 @@ def main():
     criterion = MultiBoxLoss(priors_cxcy=model.priors_cxcy).to(device)
 
     # Load dataset
-    train_dataset = PascalVOC2007Dataset(root=data_folder, split='train', keep_difficult=keep_difficult)
+    train_dataset = PascalVOC2007Dataset(root=data_folder, split='trainval', keep_difficult=True)
     train_loader = torch.utils.data.DataLoader(train_dataset,
                                                batch_size=batch_size,
                                                shuffle=True,
