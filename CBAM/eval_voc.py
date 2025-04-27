@@ -15,8 +15,8 @@ pp = PrettyPrinter()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Paths
-voc_root = '/kaggle/input/pascal-voc-2007-data-view/VOCdevkit2007/VOC2007/'  # <- adjust this based on your Kaggle dataset
-split = 'val'  # 'train', 'trainval', or 'val' depending on what you want
+voc_root = 'kaggle/input/voc2007/VOCdevkit/VOC2007'  # <- adjust this based on your Kaggle dataset
+split = 'test'  # 'train', 'trainval', or 'val' depending on what you want
 
 # Load dataset
 test_dataset = PascalVOC2007Dataset(root=voc_root, split=split, keep_difficult=True)
