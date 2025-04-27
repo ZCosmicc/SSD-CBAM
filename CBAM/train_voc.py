@@ -92,7 +92,7 @@ def main():
     criterion = MultiBoxLoss(priors_cxcy=model.priors_cxcy).to(device)
 
     # Load dataset
-    train_dataset = PascalVOC2007Dataset(root=data_folder, split='trainval', keep_difficult=keep_difficult)
+    train_dataset = PascalVOC2007Dataset(root=data_folder, split='train', keep_difficult=keep_difficult)
     train_loader = torch.utils.data.DataLoader(train_dataset,
                                                batch_size=batch_size,
                                                shuffle=True,
