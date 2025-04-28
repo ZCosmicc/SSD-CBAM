@@ -53,7 +53,7 @@ except NameError:
 # Load model
 print(f"\nInitializing SSD300 Model")
 n_classes = len(label_map)
-model = SSD300(n_classes=n_classes, use_cbam=False)  # Set use_cbam=True if you want
+model = SSD300(n_classes=n_classes, use_cbam=True)  # Set use_cbam=True if you want
 checkpoint_path = './voc_results/model_weights_epoch_99.pth'  # <- Adjust if needed
 model.load_state_dict(torch.load(checkpoint_path, map_location=device), strict=False)
 model = model.to(device)
