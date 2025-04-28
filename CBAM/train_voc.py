@@ -30,16 +30,17 @@ else:
 
 # Learning parameters
 checkpoint = None
-batch_size = 16
-epochs = 100
+batch_size = 8
+epochs = 150
 workers = 8
 print_freq = 5
 lr = 1e-3
 momentum = 0.9
 weight_decay = 5e-4
-grad_clip = None
+grad_clip = 1.0
 
-decay_lr_at = [epochs // 2, int(epochs * 0.75)]
+decay_lr_at = [40, 70]
+#decay_lr_at = [epochs // 2, int(epochs * 0.75)]
 decay_lr_to = 0.1
 
 cudnn.benchmark = True
