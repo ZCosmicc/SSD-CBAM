@@ -4,7 +4,9 @@ import torch
 import random
 import xml.etree.ElementTree as ET
 import torchvision.transforms.functional as FT
+import torchvision.transforms as transforms
 from torchvision import transforms
+from PIL import Image
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -600,7 +602,7 @@ def photometric_distort(image):
     return new_image
 
 
-def transform(image, boxes, labels, difficulties, split):
+def basic_transform(image, boxes, labels, difficulties, split):
     split = split.upper()
     assert split in {'TRAIN', 'TRAINVAL', 'VAL', 'TEST'}
 
@@ -651,6 +653,49 @@ def transform(image, boxes, labels, difficulties, split):
 
     return new_image, new_boxes, new_labels, new_difficulties
 
+# ➡️ New stronger transform
+def strong_transform(image, boxes, labels, difficulties, split):
+    if split == 'TRAIN':
+        # Randomly crop image (zoom in)
+        if has_boxes:
+            new_image, new_boxes, new_labels, new_difficulties = random_crop(new_image, new_boxes, new_labels, new_difficulties)
+
+        # Random color jitter
+        color_jitter = transforms.ColorJitter(
+            brightness=0.2,
+            contrast=0.2,
+            saturation=0.2,
+            hue=0.1
+        )
+        new_image = color_jitter(new_image)
+
+        # Random horizontal flip
+        if random.random() < 0.5:
+            new_image = new_image.transpose(Image.FLIP_LEFT_RIGHT)
+            new_boxes[:, [0, 2]] = 1.0 - new_boxes[:, [2, 0]]  # Adjust boxes
+
+        # Random small rotation
+        if random.random() < 0.2:
+            angle = random.uniform(-15, 15)
+            new_image = new_image.rotate(angle)
+
+        # Resize to input size (important!)
+        new_image = transforms.Resize((300, 300))(new_image)
+
+        # To tensor and normalize
+        new_image = transforms.ToTensor()(new_image)
+        new_image = transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                                          std=[0.229, 0.224, 0.225])(new_image)
+
+        return new_image, new_boxes, new_labels, new_difficulties
+
+    elif split == 'TEST':
+        # TEST is simple: no augmentation
+        new_image = transforms.Resize((300, 300))(image)
+        new_image = transforms.ToTensor()(new_image)
+        new_image = transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                                          std=[0.229, 0.224, 0.225])(new_image)
+        return new_image, boxes, labels, difficulties
 
 def adjust_learning_rate(optimizer, scale):
     """
