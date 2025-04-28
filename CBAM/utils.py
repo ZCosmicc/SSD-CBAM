@@ -601,7 +601,9 @@ def photometric_distort(image):
 
 
 def transform(image, boxes, labels, difficulties, split):
-    assert split in {'TRAIN', 'TEST'}
+    split = split.upper()
+    assert split in {'TRAIN', 'TRAINVAL', 'VAL', 'TEST'}
+
 
     # Mean and standard deviation of ImageNet data that our base VGG from torchvision was trained on
     mean = [0.485, 0.456, 0.406]
