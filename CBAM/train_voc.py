@@ -14,7 +14,7 @@ from utils import *
 torch.autograd.set_detect_anomaly(False)
     
 # Data parameters
-data_folder = '/kaggle/input/voc2007/VOCdevkit/VOC2007'  # Adjust here
+data_folder = '/kaggle/input/voc2007/VOCtrainval_06-Nov-2007/VOCdevkit/VOC2007'  # Adjust here
 keep_difficult = True
 
 # Model parameters
@@ -93,7 +93,7 @@ def main():
     criterion = MultiBoxLoss(priors_cxcy=model.priors_cxcy).to(device)
 
     # Load dataset
-    train_dataset = PascalVOC2007Dataset(root=data_folder, split='trainval', keep_difficult=True)
+    train_dataset = PascalVOC2007Dataset(root=data_folder, split='trainval', keep_difficult=keep_difficult)
     train_loader = torch.utils.data.DataLoader(train_dataset,
                                                batch_size=batch_size,
                                                shuffle=True,
