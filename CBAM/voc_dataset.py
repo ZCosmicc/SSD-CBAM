@@ -17,27 +17,28 @@ class PascalVOC2007Dataset(Dataset):
         with open(split_path) as f:
             self.image_ids = [line.strip() for line in f]
 
-    def __getitem__(self, index):
-        image_id = self.image_ids[index]
+    def __getitem__(self, i):
+    # Read image and objects
+    image = Image.open(self.images[i], mode='r').convert('RGB')
+    objects = self.objects[i]
+    boxes = torch.FloatTensor(objects['boxes'])
+    labels = torch.LongTensor(objects['labels'])
+    difficulties = torch.ByteTensor(objects['difficulties'])
 
-        image_path = os.path.join(self.root, 'JPEGImages', image_id + '.jpg')
-        annotation_path = os.path.join(self.root, 'Annotations', image_id + '.xml')
-
-        image = Image.open(image_path).convert('RGB')
-        target = self.parse_annotation(annotation_path)
-
-        boxes = torch.FloatTensor(target['boxes'])
-        labels = torch.LongTensor(target['labels'])
-        difficulties = torch.ByteTensor(target['difficulties'])
-
-        if not self.keep_difficult:
-            boxes = boxes[1 - difficulties]
-            labels = labels[1 - difficulties]
-            difficulties = difficulties[1 - difficulties]
-
-        image, boxes, labels, difficulties = transform(image, boxes, labels, difficulties, split=self.split)
-
+    # Apply transformations
+    transformed = transform(image, boxes, labels, difficulties, split=self.split)
+    
+    if transformed is None:
+        # If augmentation removes all boxes, fallback to original (no transform)
+        image = Image.open(self.images[i], mode='r').convert('RGB')
+        boxes = torch.FloatTensor(objects['boxes'])
+        labels = torch.LongTensor(objects['labels'])
+        difficulties = torch.ByteTensor(objects['difficulties'])
         return image, boxes, labels, difficulties
+
+    image, boxes, labels, difficulties = transformed
+    return image, boxes, labels, difficulties
+    
 
     def __len__(self):
         return len(self.image_ids)
