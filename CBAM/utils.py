@@ -9,9 +9,22 @@ from torchvision import transforms
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Correct Label Map
-voc_labels = ('background', 'stain', 'damage', 'oil stain', 'wrinkle')
-label_map = {k: v for v, k in enumerate(voc_labels)}  # Assign sequential numbers
-rev_label_map = {v: k for k, v in label_map.items()}  # Inverse mapping
+#voc_labels = ('background', 'stain', 'damage', 'oil stain', 'wrinkle')
+#label_map = {k: v for v, k in enumerate(voc_labels)}  # Assign sequential numbers
+#rev_label_map = {v: k for k, v in label_map.items()}  # Inverse mapping
+
+voc_labels = (
+    'background',
+    'aeroplane', 'bicycle', 'bird', 'boat',
+    'bottle', 'bus', 'car', 'cat', 'chair',
+    'cow', 'diningtable', 'dog', 'horse',
+    'motorbike', 'person', 'pottedplant',
+    'sheep', 'sofa', 'train', 'tvmonitor'
+)
+
+# Sequentially map labels to integers
+label_map = {k: v for v, k in enumerate(voc_labels)}
+rev_label_map = {v: k for k, v in label_map.items()}
 
 
 # Color map for bounding boxes of detected objects from https://sashat.me/2017/01/11/list-of-20-simple-distinct-colors/
