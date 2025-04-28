@@ -15,7 +15,7 @@ pp = PrettyPrinter()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Paths
-voc_root = 'kaggle/input/voc2007/VOCdevkit/VOC2007'  # <- adjust this based on your Kaggle dataset
+voc_root = '/kaggle/input/voc2007/VOCtest_06-Nov-2007/VOCdevkit/VOC2007'  # <- adjust this based on your Kaggle dataset
 split = 'test'  # 'train', 'trainval', or 'val' depending on what you want
 
 # Load dataset
@@ -54,7 +54,7 @@ except NameError:
 print(f"\nInitializing SSD300 Model")
 n_classes = len(label_map)
 model = SSD300(n_classes=n_classes, use_cbam=False)  # Set use_cbam=True if you want
-checkpoint_path = './results/model_weights_epoch_99.pth'  # <- Adjust if needed
+checkpoint_path = './voc_results/model_weights_epoch_99.pth'  # <- Adjust if needed
 model.load_state_dict(torch.load(checkpoint_path, map_location=device), strict=False)
 model = model.to(device)
 model.eval()
