@@ -6,7 +6,7 @@ from pprint import PrettyPrinter
 
 from voc_dataset import PascalVOC2007Dataset
 from model import SSD300
-from utils import label_map, rev_label_map, calculate_mAP, transform_test as transform  # import your existing utils
+from utils import label_map, rev_label_map, calculate_mAP, transform_train, transform_test  # import your existing utils
 
 # Pretty print setup
 pp = PrettyPrinter()
