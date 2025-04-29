@@ -72,7 +72,7 @@ def main():
     # Initialize model
     if checkpoint is None:
         start_epoch = 0
-        model = SSD300(n_classes=n_classes, use_cbam=True)  # ← Change to True if you want CBAM
+        model = SSD300(n_classes=n_classes, use_cbam=False)  # ← Change to True if you want CBAM
         biases = list()
         not_biases = list()
         for param_name, param in model.named_parameters():
