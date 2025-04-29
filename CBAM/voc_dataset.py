@@ -1,11 +1,11 @@
-# File: voc_dataset.py (experimental using voc 2007 dataset to check which one is actually broken the code or dataset)
+# File: voc_dataset.py (experimental using VOC 2007 dataset to check which one is actually broken: the code or the dataset)
 
 import os
 import torch
 from torch.utils.data import Dataset
 from PIL import Image
 import xml.etree.ElementTree as ET
-from utils import transform_train, transform_test, label_map  # Use your existing transform (switch between basic/strong_transform) and label_map 
+from utils import transform_train, transform_test, label_map  # Use your existing transforms and label map
 
 class PascalVOC2007Dataset(Dataset):
     def __init__(self, root, split='test', keep_difficult=False):
@@ -17,28 +17,40 @@ class PascalVOC2007Dataset(Dataset):
         with open(split_path) as f:
             self.image_ids = [line.strip() for line in f]
 
-    def __getitem__(self, i):
-    # Read image and objects
-    image = Image.open(self.images[i], mode='r').convert('RGB')
-    objects = self.objects[i]
-    boxes = torch.FloatTensor(objects['boxes'])
-    labels = torch.LongTensor(objects['labels'])
-    difficulties = torch.ByteTensor(objects['difficulties'])
+        self.images = []
+        self.objects = []
 
-    # Apply transformations
-    transformed = transform(image, boxes, labels, difficulties, split=self.split)
-    
-    if transformed is None:
-        # If augmentation removes all boxes, fallback to original (no transform)
+        for image_id in self.image_ids:
+            image_path = os.path.join(self.root, 'JPEGImages', image_id + '.jpg')
+            annotation_path = os.path.join(self.root, 'Annotations', image_id + '.xml')
+
+            self.images.append(image_path)
+            self.objects.append(self.parse_annotation(annotation_path))
+
+    def __getitem__(self, i):
+        # Read image and objects
         image = Image.open(self.images[i], mode='r').convert('RGB')
+        objects = self.objects[i]
         boxes = torch.FloatTensor(objects['boxes'])
         labels = torch.LongTensor(objects['labels'])
         difficulties = torch.ByteTensor(objects['difficulties'])
-        return image, boxes, labels, difficulties
 
-    image, boxes, labels, difficulties = transformed
-    return image, boxes, labels, difficulties
-    
+        # Select the correct transform
+        transform = transform_train if self.split == 'train' else transform_test
+
+        # Apply transformation
+        transformed = transform(image, boxes, labels, difficulties, split=self.split)
+
+        if transformed is None:
+            # Fallback if all objects were removed by augmentation
+            image = Image.open(self.images[i], mode='r').convert('RGB')
+            boxes = torch.FloatTensor(objects['boxes'])
+            labels = torch.LongTensor(objects['labels'])
+            difficulties = torch.ByteTensor(objects['difficulties'])
+            return image, boxes, labels, difficulties
+
+        image, boxes, labels, difficulties = transformed
+        return image, boxes, labels, difficulties
 
     def __len__(self):
         return len(self.image_ids)
