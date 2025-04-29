@@ -5,7 +5,7 @@ import torch
 from torch.utils.data import Dataset
 from PIL import Image
 import xml.etree.ElementTree as ET
-from utils import strong_transform as transform, label_map  # Use your existing transform (switch between basic/strong_transform) and label_map 
+from utils import transform_train, transform_test, label_map  # Use your existing transform (switch between basic/strong_transform) and label_map 
 
 class PascalVOC2007Dataset(Dataset):
     def __init__(self, root, split='test', keep_difficult=False):
