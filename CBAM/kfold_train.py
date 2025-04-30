@@ -81,8 +81,13 @@ def train_one_fold(fold, train_idx, val_idx, all_images, all_objects):
             adjust_learning_rate(optimizer, decay_lr_to)
         train(train_loader, model, criterion, optimizer, epoch)
 
+    # Ensure weights folder exists
+    os.makedirs('weights', exist_ok=True)
+
+    # Save model
     torch.save(model.state_dict(), f'weights/ssd_cbam_fold{fold+1}.pth' if use_cbam else f'weights/ssd_fold{fold+1}.pth')
     print(f"Saved model for fold {fold+1}\n")
+
 
 def main():
     all_images, all_objects = load_full_dataset('TRAIN')
