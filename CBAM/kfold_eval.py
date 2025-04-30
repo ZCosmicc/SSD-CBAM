@@ -15,7 +15,7 @@ data_folder = '/kaggle/working/SSD-CBAM/TextileDefectDetectionReorganizedVOC'
 n_splits = 5
 keep_difficult = True
 batch_size = 16
-workers = 4
+workers = 8
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 pp = PrettyPrinter()
 
