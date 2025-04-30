@@ -3,7 +3,7 @@ from torch.utils.data import Dataset
 import json
 import os
 from PIL import Image
-from utils import basic_transform
+from utils import transform
 
 
 class PascalVOCDataset(Dataset):
