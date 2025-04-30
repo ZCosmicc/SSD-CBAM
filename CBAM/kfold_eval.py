@@ -21,7 +21,7 @@ pp = PrettyPrinter()
 
 # Load all data
 print("Loading dataset for fold splits...")
-full_dataset = PascalVOCDataset(data_folder, split='TEST', keep_difficult=keep_difficult)
+full_dataset = PascalVOCDataset(data_folder, split='TRAIN', keep_difficult=keep_difficult)
 indices = list(range(len(full_dataset)))
 kf = KFold(n_splits=n_splits, shuffle=True, random_state=42)
 
