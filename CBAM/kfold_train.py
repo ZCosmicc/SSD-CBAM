@@ -11,6 +11,7 @@ from sklearn.model_selection import KFold
 from model import SSD300, MultiBoxLoss
 from datasets import PascalVOCDataset
 from utils import *
+from train import train
 
 torch.autograd.set_detect_anomaly(False)
 
