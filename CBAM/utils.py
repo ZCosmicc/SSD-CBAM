@@ -602,7 +602,7 @@ def photometric_distort(image):
     return new_image
 
 
-def basic_transform(image, boxes, labels, difficulties, split):
+def transform(image, boxes, labels, difficulties, split):
     split = split.upper()
     assert split in {'TRAIN', 'TRAINVAL', 'VAL', 'TEST'}
 
