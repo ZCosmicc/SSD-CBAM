@@ -775,4 +775,4 @@ def clip_gradient(optimizer, grad_clip):
 
 # Explicit aliases for clarity
 transform_train = strong_transform
-transform_test = basic_transform
+transform_test = transform
