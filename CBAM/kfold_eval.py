@@ -21,7 +21,7 @@ pp = PrettyPrinter()
 
 # Load all data
 print("Loading dataset for fold splits...")
-full_dataset = PascalVOCDataset(data_folder, split='TRAIN', keep_difficult=keep_difficult)
+full_dataset = PascalVOCDataset(data_folder, split='TEST', keep_difficult=keep_difficult)
 indices = list(range(len(full_dataset)))
 kf = KFold(n_splits=n_splits, shuffle=True, random_state=42)
 
@@ -111,7 +111,9 @@ def calculate_precision_recall(det_boxes, det_labels, true_boxes, true_labels, t
 def evaluate_fold(fold, val_indices):
     print(f"\n--- Evaluating Fold {fold + 1} ---")
 
-    checkpoint_path = f'./results/fold_{fold}/model_weights_epoch_99.pth'
+    model_filename = f'ssd_cbam_fold{fold+1}.pth' if use_cbam else f'ssd_fold{fold+1}.pth'
+    checkpoint_path = os.path.join('weights', model_filename)
+
     if not os.path.exists(checkpoint_path):
         print(f"Checkpoint not found for fold {fold}: {checkpoint_path}")
         return
@@ -143,7 +145,7 @@ def evaluate_fold(fold, val_indices):
             predicted_locs, predicted_scores = model(images)
 
             det_boxes_batch, det_labels_batch, det_scores_batch = model.detect_objects(
-                predicted_locs, predicted_scores, min_score=0.3, max_overlap=0.35, top_k=100
+                predicted_locs, predicted_scores, min_score=0.3, max_overlap=0.35, top_k=200
             )
 
             boxes = [b.to(device) for b in boxes]
