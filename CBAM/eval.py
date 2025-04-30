@@ -172,6 +172,7 @@ def evaluate(test_loader, model):
     print("\nOverall Precision and Recall:")
     pp.pprint(overall_pr)
 
+    return mAP, APs, pr_results, overall_pr
 
 if __name__ == '__main__':
     evaluate(test_loader, model)
