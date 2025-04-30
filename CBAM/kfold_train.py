@@ -1,56 +1,93 @@
 import os
+import time
+import json
 import torch
-from torch.utils.data import DataLoader
+import random
+import shutil
+import numpy as np
+import torch.backends.cudnn as cudnn
+import torch.utils.data
 from sklearn.model_selection import KFold
-
+from model import SSD300, MultiBoxLoss
 from datasets import PascalVOCDataset
-from model import SSD300, SSD_CBAM  # Adjust if class names are different
-from train import train_one_epoch
-from eval import evaluate
-from utils import transform, MultiBoxLoss
+from utils import *
 
-# === Config ===
-data_folder = 'data'  # Adjust to your dataset folder
+torch.autograd.set_detect_anomaly(False)
+
+# Parameters
+data_folder = '/kaggle/working/SSD-CBAM/TextileDefectDetectionReorganizedVOC'
+keep_difficult = True
+use_cbam = True
+
+n_classes = len(label_map)
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 batch_size = 16
-num_epochs = 100
-num_folds = 5
-use_cbam = True  # Set to False to train baseline SSD
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+test_epochs = 100
+workers = 8
+print_freq = 5
+lr = 1e-3
+momentum = 0.9
+weight_decay = 5e-4
+decay_lr_at = [test_epochs // 2, int(test_epochs * 0.75)]
+decay_lr_to = 0.1
 
-# === Load Full Dataset (we use 'TRAIN' for both train/val in k-fold) ===
-full_dataset = PascalVOCDataset(data_folder=data_folder, split='TRAIN', keep_difficult=False)
-indices = list(range(len(full_dataset)))
+def load_full_dataset(split):
+    with open(os.path.join(data_folder, f'{split}_images.json')) as f:
+        images = json.load(f)
+    with open(os.path.join(data_folder, f'{split}_objects.json')) as f:
+        objects = json.load(f)
+    return images, objects
 
-# === Set up Cross Validation ===
-kf = KFold(n_splits=num_folds, shuffle=True, random_state=42)
+def save_fold_data(images, objects, split_name, fold):
+    os.makedirs(f'./fold_data/fold{fold}', exist_ok=True)
+    with open(f'./fold_data/fold{fold}/{split_name}_images.json', 'w') as f:
+        json.dump(images, f)
+    with open(f'./fold_data/fold{fold}/{split_name}_objects.json', 'w') as f:
+        json.dump(objects, f)
 
-for fold, (train_idx, val_idx) in enumerate(kf.split(indices)):
-    print(f"\n==== Fold {fold + 1} ====\n")
+def train_one_fold(fold, train_idx, val_idx, all_images, all_objects):
+    print(f"\n--- Fold {fold+1} ---")
 
-    # Datasets for current fold
-    train_dataset = PascalVOCDataset(data_folder, split='TRAIN', keep_difficult=False, indices=train_idx)
-    val_dataset = PascalVOCDataset(data_folder, split='TRAIN', keep_difficult=False, indices=val_idx)
+    train_images = [all_images[i] for i in train_idx]
+    train_objects = [all_objects[i] for i in train_idx]
+    val_images = [all_images[i] for i in val_idx]
+    val_objects = [all_objects[i] for i in val_idx]
 
-    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True,
-                              collate_fn=train_dataset.collate_fn, num_workers=4)
-    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False,
-                            collate_fn=val_dataset.collate_fn, num_workers=4)
+    save_fold_data(train_images, train_objects, 'TRAIN', fold)
+    save_fold_data(val_images, val_objects, 'TEST', fold)
 
-    # === Initialize Model ===
-    model = SSD_CBAM(num_classes=21) if use_cbam else SSD300(num_classes=21)  # Change num_classes if needed
-    model = model.to(device)
-
-    # === Loss & Optimizer ===
+    model = SSD300(n_classes=n_classes, use_cbam=use_cbam).to(device)
     criterion = MultiBoxLoss(priors_cxcy=model.priors_cxcy).to(device)
-    optimizer = torch.optim.SGD(model.parameters(), lr=1e-3, momentum=0.9, weight_decay=5e-4)
 
-    # === Training Loop ===
-    for epoch in range(num_epochs):
-        print(f'[Fold {fold + 1}][Epoch {epoch + 1}/{num_epochs}]')
-        train_one_epoch(model, train_loader, criterion, optimizer, device)
-        evaluate(model, val_loader, device)
+    biases = [p for n, p in model.named_parameters() if p.requires_grad and n.endswith('.bias')]
+    not_biases = [p for n, p in model.named_parameters() if p.requires_grad and not n.endswith('.bias')]
 
-    # === Save Model ===
-    os.makedirs('weights', exist_ok=True)
-    model_type = 'ssd_cbam' if use_cbam else 'ssd'
-    torch.save(model.state_dict(), f'weights/{model_type}_fold{fold + 1}.pth')
+    optimizer = torch.optim.SGD(
+        [{'params': biases, 'lr': 2 * lr}, {'params': not_biases}],
+        lr=lr, momentum=momentum, weight_decay=weight_decay
+    )
+
+    cudnn.benchmark = True
+
+    train_dataset = PascalVOCDataset(f'./fold_data/fold{fold}', 'TRAIN', keep_difficult)
+    train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size, shuffle=True,
+                                               collate_fn=train_dataset.collate_fn, num_workers=workers,
+                                               pin_memory=True, persistent_workers=True)
+
+    for epoch in range(test_epochs):
+        if epoch in decay_lr_at:
+            adjust_learning_rate(optimizer, decay_lr_to)
+        train(train_loader, model, criterion, optimizer, epoch)
+
+    torch.save(model.state_dict(), f'weights/ssd_cbam_fold{fold+1}.pth' if use_cbam else f'weights/ssd_fold{fold+1}.pth')
+    print(f"Saved model for fold {fold+1}\n")
+
+def main():
+    all_images, all_objects = load_full_dataset('TRAIN')
+    kf = KFold(n_splits=5, shuffle=True, random_state=42)
+    for fold, (train_idx, val_idx) in enumerate(kf.split(all_images)):
+        train_one_fold(fold, train_idx, val_idx, all_images, all_objects)
+
+if __name__ == '__main__':
+    main()
