@@ -11,36 +11,36 @@ from PIL import Image
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Correct Label Map
-#voc_labels = ('background', 'stain', 'damage', 'oil stain', 'wrinkle')
-#label_map = {k: v for v, k in enumerate(voc_labels)}  # Assign sequential numbers
-#rev_label_map = {v: k for k, v in label_map.items()}  # Inverse mapping
+voc_labels = ('background', 'stain', 'damage', 'oil stain', 'wrinkle')
+label_map = {k: v for v, k in enumerate(voc_labels)}  # Assign sequential numbers
+rev_label_map = {v: k for k, v in label_map.items()}  # Inverse mapping
 
-voc_labels = (
-    'background',
-    'aeroplane', 'bicycle', 'bird', 'boat',
-    'bottle', 'bus', 'car', 'cat', 'chair',
-    'cow', 'diningtable', 'dog', 'horse',
-    'motorbike', 'person', 'pottedplant',
-    'sheep', 'sofa', 'train', 'tvmonitor'
-)
+#voc_labels = (
+   # 'background',
+   # 'aeroplane', 'bicycle', 'bird', 'boat',
+   # 'bottle', 'bus', 'car', 'cat', 'chair',
+   # 'cow', 'diningtable', 'dog', 'horse',
+   # 'motorbike', 'person', 'pottedplant',
+   # 'sheep', 'sofa', 'train', 'tvmonitor'
+#)
 
 # Sequentially map labels to integers
-label_map = {k: v for v, k in enumerate(voc_labels)}
-rev_label_map = {v: k for k, v in label_map.items()}
+#label_map = {k: v for v, k in enumerate(voc_labels)}
+#rev_label_map = {v: k for k, v in label_map.items()}
 
 # Color map for bounding boxes of detected objects
-distinct_colors = [
-    '#e6194b', '#3cb44b', '#ffe119', '#0082c8', '#f58231', '#911eb4', '#46f0f0',
-    '#f032e6', '#d2f53c', '#fabebe', '#008080', '#e6beff', '#aa6e28', '#fffac8',
-    '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000080', '#808080', '#FFFFFF'
-]
+#distinct_colors = [
+   # '#e6194b', '#3cb44b', '#ffe119', '#0082c8', '#f58231', '#911eb4', '#46f0f0',
+   # '#f032e6', '#d2f53c', '#fabebe', '#008080', '#e6beff', '#aa6e28', '#fffac8',
+   # '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000080', '#808080', '#FFFFFF'
+#]
 
-label_color_map = {k: distinct_colors[i] for i, k in enumerate(label_map.keys())}
+#label_color_map = {k: distinct_colors[i] for i, k in enumerate(label_map.keys())}
 
 
 # Color map for bounding boxes of detected objects from https://sashat.me/2017/01/11/list-of-20-simple-distinct-colors/
-#distinct_colors = ['#e6194b', '#3cb44b', '#ffe119', '#0082c8', '#f58231']
-#label_color_map = {k: distinct_colors[i] for i, k in enumerate(label_map.keys())}
+distinct_colors = ['#e6194b', '#3cb44b', '#ffe119', '#0082c8', '#f58231']
+label_color_map = {k: distinct_colors[i] for i, k in enumerate(label_map.keys())}
 
 
 def parse_annotation(annotation_path):
