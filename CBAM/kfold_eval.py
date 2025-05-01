@@ -19,7 +19,7 @@ workers = 8
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 pp = PrettyPrinter()
 
-use_cbam = True  # Change to False when evaluating the plain SSD model
+use_cbam = False  # Change to False when evaluating the plain SSD model
 
 # Load all data
 print("Loading dataset for fold splits...")
