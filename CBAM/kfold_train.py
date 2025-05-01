@@ -18,7 +18,7 @@ torch.autograd.set_detect_anomaly(False)
 # Parameters
 data_folder = '/kaggle/working/SSD-CBAM/TextileDefectDetectionReorganizedVOC'
 keep_difficult = True
-use_cbam = True
+use_cbam = False
 
 n_classes = len(label_map)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
