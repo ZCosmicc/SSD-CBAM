@@ -19,6 +19,8 @@ workers = 8
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 pp = PrettyPrinter()
 
+use_cbam = True  # Change to False when evaluating the plain SSD model
+
 # Load all data
 print("Loading dataset for fold splits...")
 full_dataset = PascalVOCDataset(data_folder, split='TRAIN', keep_difficult=keep_difficult)
@@ -120,7 +122,7 @@ def evaluate_fold(fold, val_indices):
 
     # Load model
     print("Loading model...")
-    model = SSD300(n_classes=len(label_map), use_cbam=True)
+    model = SSD300(n_classes=len(label_map), use_cbam=use_cbam)
     model.load_state_dict(torch.load(checkpoint_path), strict=False)
     model = model.to(device)
     model.eval()
