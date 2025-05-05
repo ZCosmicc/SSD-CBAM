@@ -24,7 +24,7 @@ n_classes = len(label_map)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 batch_size = 16
-test_epochs = 20
+test_epochs = 100
 workers = 8
 print_freq = 5
 lr = 1e-3
