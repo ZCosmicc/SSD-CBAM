@@ -1,0 +1,68 @@
+<annotation>
+	<folder></folder>
+	<filename>059891_jpg.rf.cd5434b0983581048f826c044e333ac4.jpg</filename>
+	<path>059891_jpg.rf.cd5434b0983581048f826c044e333ac4.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>300</width>
+		<height>300</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Oil Stain</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>62</xmin>
+			<xmax>161</xmax>
+			<ymin>1</ymin>
+			<ymax>77</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Oil Stain</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>86</xmin>
+			<xmax>267</xmax>
+			<ymin>51</ymin>
+			<ymax>219</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Oil Stain</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>257</xmin>
+			<xmax>297</xmax>
+			<ymin>1</ymin>
+			<ymax>44</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Oil Stain</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>3</xmin>
+			<xmax>160</xmax>
+			<ymin>219</ymin>
+			<ymax>301</ymax>
+		</bndbox>
+	</object>
+	<metadata>
+	</metadata>
+</annotation>

@@ -1,0 +1,42 @@
+<annotation>
+	<folder></folder>
+	<filename>021208_jpg.rf.cdb6e7487d293a5cdb99ad501e7612ce.jpg</filename>
+	<path>021208_jpg.rf.cdb6e7487d293a5cdb99ad501e7612ce.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>300</width>
+		<height>300</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Oil Stain</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>1</xmin>
+			<xmax>93</xmax>
+			<ymin>1</ymin>
+			<ymax>92</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Damage</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>1</xmin>
+			<xmax>46</xmax>
+			<ymin>1</ymin>
+			<ymax>48</ymax>
+		</bndbox>
+	</object>
+	<metadata>
+	</metadata>
+</annotation>

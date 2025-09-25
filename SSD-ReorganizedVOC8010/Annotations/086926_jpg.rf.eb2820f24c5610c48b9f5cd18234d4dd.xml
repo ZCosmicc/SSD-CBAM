@@ -1,0 +1,29 @@
+<annotation>
+	<folder></folder>
+	<filename>086926_jpg.rf.eb2820f24c5610c48b9f5cd18234d4dd.jpg</filename>
+	<path>086926_jpg.rf.eb2820f24c5610c48b9f5cd18234d4dd.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>300</width>
+		<height>300</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Damage</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>192</xmin>
+			<xmax>229</xmax>
+			<ymin>1</ymin>
+			<ymax>301</ymax>
+		</bndbox>
+	</object>
+	<metadata>
+	</metadata>
+</annotation>
