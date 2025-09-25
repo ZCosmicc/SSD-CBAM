@@ -27,7 +27,7 @@ else:
 
 # Modified learning parameters for testing
 checkpoint = None
-batch_size = 8
+batch_size = 16
 test_epochs = 100
 workers = 8
 print_freq = 5  # Print more frequently
