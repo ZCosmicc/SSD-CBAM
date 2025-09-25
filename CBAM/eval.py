@@ -15,12 +15,13 @@ rev_label_map = {v: k for k, v in label_map.items()}
 
 
 # Parameters
-data_folder = '/kaggle/working/SSD-CBAM/TextileDefectDetectionReorganizedVOC'
+#data_folder = '/kaggle/working/SSD-CBAM/TextileDefectDetectionReorganizedVOC'
+data_folder = '/kaggle/working/SSD-CBAM/SSD-ReorganizedVOC8010'
 keep_difficult = True
-batch_size = 16
+batch_size = 8
 workers = 8
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-use_cbam = True  # Match this to training config
+use_cbam = False  # Match this to training config
 checkpoint = './results/model_weights_epoch_99.pth'
 
 # Load model
